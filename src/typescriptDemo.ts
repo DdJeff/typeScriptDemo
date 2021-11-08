@@ -41,3 +41,5 @@ const myCar:ICar = {
     },
 }
 
+//types and Unions
+

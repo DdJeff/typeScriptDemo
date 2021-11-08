@@ -20,3 +20,4 @@ var myCar = {
         return "honk";
     }
 };
+//types and Unions
