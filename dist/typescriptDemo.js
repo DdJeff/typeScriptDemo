@@ -21,3 +21,8 @@ var myCar = {
     }
 };
 //types and Unions
+//Union operators
+var pageNumber = "1"; //so it could be either or, usecae with null then real type
+var errorMessage = null;
+var user3 = null;
+var populareTags = ["one", 'two'];

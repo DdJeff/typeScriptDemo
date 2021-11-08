@@ -43,3 +43,22 @@ const myCar:ICar = {
 
 //types and Unions
 
+//Union operators
+let pageNumber : string | number = "1"; //so it could be either or, usecae with null then real type
+
+let errorMessage : string | null = null;
+
+let user3 : IUser | null = null;
+
+// type Alias 
+
+type ID = string; //Alias
+type PopularTag = string;
+type MaybePopular = PopularTag | null; //type and unions
+
+interface IPerson {
+    id: ID;//best practice to create an Id type to use inside interface
+}
+
+const populareTags: PopularTag[] = ["one", 'two'];
+
