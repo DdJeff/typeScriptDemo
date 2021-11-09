@@ -132,3 +132,31 @@ const user4 = new User('deontay', 'jefferson');
 class Admin extends User{}
 
 const manager = new Admin("D", "Jeff");
+
+//generics
+
+const addId = <T extends object>(obj:T) =>{ //extends obj makes sure its an object in the generic
+    const id = Math.random().toString(16);
+    return {
+        ...obj,
+        id,
+    };
+};
+
+interface UserInterface <T/*,V*/>{//can pass more then 1 data type
+    name : string;
+    data : T
+}
+const user5 : UserInterface<{meta:string}> = {
+    name:'Jack',
+    data: {
+        meta : "foo",
+   },
+};
+
+const user6 :UserInterface <string[]> ={
+    name : "John",
+    data : ['foo','buzz']
+};
+
+//const results = addId<UserInterface>(user5);
