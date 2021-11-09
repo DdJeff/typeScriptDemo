@@ -110,3 +110,23 @@ someElement.addEventListener('blur', event => {
     console.log('event', target.value);
     
 })
+
+//classes in ts
+class User{
+   private firstName: string
+   private lastName: string
+   readonly unchangableAttribute: string;
+   static maxCount : number;
+
+    constructor(firstName: string, lastName: string){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    getFullname(): string{
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const user4 = new User('deontay', 'jefferson');
+
+class Admin extends User{}
