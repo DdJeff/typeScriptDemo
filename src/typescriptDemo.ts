@@ -92,3 +92,21 @@ console.log(youtubeVideo);
 
 //type assertion
 let s2: string = vUnknown as string;
+
+let page : string = "2";
+
+let number : number = page as unknown as number; //to convert a string to a number
+
+//working with dom
+
+const someElement = document.querySelector(".foo") as HTMLInputElement;
+
+console.log("someElement", someElement.value);
+
+//adding listener
+
+someElement.addEventListener('blur', event => {
+    const target = event.target as HTMLInputElement;
+    console.log('event', target.value);
+    
+})
