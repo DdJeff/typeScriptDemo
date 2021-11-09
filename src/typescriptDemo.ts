@@ -62,3 +62,33 @@ interface IPerson {
 
 const populareTags: PopularTag[] = ["one", 'two'];
 
+//void
+const doSomthing = ( ): void => {
+    console.log("doSomthing");
+};
+
+//any (worst type) use as less as possible
+
+let test : any = "mouse";
+
+//never
+const neverdoSomthing = ( ): never => {
+    //console.log("doSomthing"); //can not have a code that ends
+    throw "never"; //it never ends
+};
+
+//unknown => better then type any
+
+let vAny:any = 10;
+let vUnknown:unknown = 10;
+
+let s1: string = vAny; //will allow
+//let s2: string = vUnknown; //will not allow to define unknown by another type
+
+let youtubeVideo : string = 'https://www.youtube.com/watch?v=gp5H0Vw39yw&t=434s';
+
+console.log(youtubeVideo);
+//46:58
+
+//type assertion
+let s2: string = vUnknown as string;
