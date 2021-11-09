@@ -130,3 +130,5 @@ class User{
 const user4 = new User('deontay', 'jefferson');
 
 class Admin extends User{}
+
+const manager = new Admin("D", "Jeff");
