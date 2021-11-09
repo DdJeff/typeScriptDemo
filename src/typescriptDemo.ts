@@ -160,3 +160,25 @@ const user6 :UserInterface <string[]> ={
 };
 
 //const results = addId<UserInterface>(user5);
+
+//enums
+
+/*const statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2,
+};*/
+
+enum StatusesEnum {
+    NotStarted = "notStarted", //to assign values if not default is a number, 0,1,2...
+    inProgress = "inProgress",
+    Done = "done",
+}
+
+let notStartedStatus : StatusesEnum = StatusesEnum.NotStarted;
+//now the data type is statuses therefore only a status type can be the value
+
+interface ITask {
+    id: string,
+    status: StatusesEnum
+}

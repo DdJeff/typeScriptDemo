@@ -119,3 +119,16 @@ var user6 = {
     data: ['foo', 'buzz']
 };
 //const results = addId<UserInterface>(user5);
+//enums
+/*const statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2,
+};*/
+var StatusesEnum;
+(function (StatusesEnum) {
+    StatusesEnum["NotStarted"] = "notStarted";
+    StatusesEnum["inProgress"] = "inProgress";
+    StatusesEnum["Done"] = "done";
+})(StatusesEnum || (StatusesEnum = {}));
+var notStartedStatus = StatusesEnum.NotStarted;
